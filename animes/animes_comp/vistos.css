@@ -1,0 +1,90 @@
+body {
+    background: linear-gradient(to right, #1a1a1a, #333);
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-shadow: 4px 4px 2px #000;
+    text-align: center;
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 250ms ease-in, transform 700ms cubic-bezier(1,.11,0,2.25);
+}
+
+h1:hover {
+    background-color: blueviolet;
+    transform: scale(0.95);
+}
+
+p {
+    margin: 20px;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.anime-portada {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.anime-portada img {
+    height: 250px;
+    width: auto;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
+
+.personajes-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.personaje-bloque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 150px;
+}
+
+.personaje-bloque img {
+    height: 150px;
+    width: 150px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+}
+
+a {
+    color: rgb(0, 255, 98);
+    text-decoration-style: wavy;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.linkP {
+    text-decoration-style: double;
+    color: rgb(255, 0, 221);
+}

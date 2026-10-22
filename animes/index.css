@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #0e2136;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    text-align: center;
+    color: #00f7ff;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    border: 3px double #00f7ff;
+    padding: 5px 600px;
+    transition: 
+        border 1000ms ease, 
+        color 500ms ease, 
+        transform 1000ms cubic-bezier(1, 1.04, .32, 1.44);
+}
+
+.titulo:hover{
+    max-width: 100%;
+    transform: scale(1.1);
+    border: 2px solid rgb(255, 70, 200);
+    color: rgb(255, 255, 255);
+}
+
+.box {
+    background: #142d4a;
+    width: 400px;
+    min-height: 300px;
+    border-radius: 10px;
+    position: relative;
+    isolation: isolate;
+    padding: 25px;
+    margin: 100px;
+}
+
+@property --deg {
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+}
+
+.box::before,
+.box::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+
+    background: conic-gradient(
+        from var(--deg) at center,
+        #00f7ff,
+        #17a4c7,
+        #ae00ff,
+        #009dcd,
+        #00f7ff
+    );
+
+    border-radius: inherit;
+    z-index: -1;
+    animation: autoRotate 2s linear infinite;
+}
+
+.box::after {
+    filter: blur(10px);
+    opacity: 0.7;
+}
+
+@keyframes autoRotate {
+    to {
+        --deg: 360deg;
+    }
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h2 {
+    display: inline-block;
+    box-sizing: content-box;
+    color: #ff00dd;
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+    border-bottom: 2px dashed white;
+    padding: 0;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration-style: double;
+}
+
+a:hover {
+    transition: 500ms;
+    color: white;
+}
+
+footer {
+    color: white;
+    text-align: left;
+    margin-top: 67px;
+}
